@@ -1,6 +1,6 @@
 # Predicting the Temperature Dependence of Surfactant CMCs using Graph Neural Networks
-This is the source code for the paper:
-# Graphical abstract 
+This is the source code for the paper: [Predicting the Temperature Dependence of Surfactant CMCs Using Graph Neural Networks](https://arxiv.org/abs/2403.03767)
+# Graphical abstract
 ![Graphical abstract](graphical_abstract.png)
 
 # Data
