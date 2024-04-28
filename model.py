@@ -113,7 +113,7 @@ ext_test_dataset.data.y = (ext_test_dataset.data.y - mean) / std
 
 def data_preparation(seed):
     torch.manual_seed(seed)
-    dataset.shuffle()
+    dataset = dataset.shuffle()
     val_dataset = dataset[:200]
     train_dataset = dataset[200:]
     train_loader = DataLoader(train_dataset, batch_size = batch, shuffle = True)
