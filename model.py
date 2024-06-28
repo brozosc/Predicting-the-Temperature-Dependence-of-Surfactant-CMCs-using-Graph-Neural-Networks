@@ -71,9 +71,8 @@ class GNNReg(torch.nn.Module):
         x = scatter_add(x_forward, data.batch, dim=0)
         temp = 10*temp  # The temperature was originally normalized between {0,1}. As described in our work, we found the normalization between {0,10} to perform better. Therefore, this extra step was added.
 
-        x = torch.cat([x, temp.reshape(x.shape[0],1)], dim = 1) 
- 
         x = F.relu(self.fc1(x))
+        x = torch.cat([x, temp.reshape(x.shape[0],1)], dim = 1)
         x = F.relu(self.fc2(x))
         x = self.fc3(x)
         
