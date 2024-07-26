@@ -56,8 +56,8 @@ class GNNReg(torch.nn.Module):
             
         self.conv1 = GINEConv(gine_nn, train_eps = False)  # The graph convolutinal layer   
 
-        self.fc1 = torch.nn.Linear(dim+1, dim)     # Initial layer of the MLP. The input dimension is increased by 1 neuron, to incorporate the temperature information.  
-        self.fc2 = torch.nn.Linear(dim, dim)
+        self.fc1 = torch.nn.Linear(dim, dim)     # Initial layer of the MLP.  
+        self.fc2 = torch.nn.Linear(dim+1, dim)   # The input dimension is increased by 1 neuron, to incorporate the temperature information.
         self.fc3 = torch.nn.Linear(dim , 1)
         
     
